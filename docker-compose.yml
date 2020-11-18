@@ -3,30 +3,30 @@ services:
   simple_php:
     build:
       context: .
-    image: simple_php_dock
+    image: gcp-dock
     ports:
-      - 8888:80
-    depends_on:
-      - db
+      - 8080:80
+    # depends_on:
+    #   - db
     environment:
       # DATABASE_URL: postgres://postgres:qwerty@182.10.0.1/main
       DEBUG: 'true'
     networks:
         default:
             ipv4_address: 182.10.0.8
-  db:
-    image: postgres
-    environment:
-      POSTGRES_DB: main
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: qwerty
-    volumes:
-      - db:/var/lib/postgres
-    ports:
-      - 5482:5432
-    networks:
-        default:
-            ipv4_address: 182.10.0.9
+  # db:
+  #   image: postgres
+  #   environment:
+  #     POSTGRES_DB: main
+  #     POSTGRES_USER: postgres
+  #     POSTGRES_PASSWORD: qwerty
+  #   volumes:
+  #     - db:/var/lib/postgres
+  #   ports:
+  #     - 5482:5432
+  #   networks:
+  #       default:
+  #           ipv4_address: 182.10.0.9
         
 volumes:
   db: {}
