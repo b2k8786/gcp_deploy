@@ -5,7 +5,7 @@ services:
       context: .
     image: gcp-dock
     ports:
-      - 8888:80
+      # - 8888:80
     # depends_on:
     #   - db
     environment:
