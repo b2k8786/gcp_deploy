@@ -8,9 +8,9 @@ services:
     #   - 8080:80
     # depends_on:
     #   - db
-    environment:
+    # environment:
       # DATABASE_URL: postgres://postgres:qwerty@182.10.0.1/main
-      DEBUG: 'true'
+      # DEBUG: 'true'
     # networks:
     #     default:
     #         ipv4_address: 0.0.0.0
@@ -28,8 +28,8 @@ services:
   #       default:
   #           ipv4_address: 182.10.0.9
         
-volumes:
-  db: {}
+# volumes:
+#   db: {}
 networks:
   default:
     driver: bridge
