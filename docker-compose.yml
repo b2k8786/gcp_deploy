@@ -4,8 +4,8 @@ services:
     build:
       context: .
     image: gcp-dock
-    # ports:
-    #   - 8080:80
+    ports:
+      - 8080:80
     # depends_on:
     #   - db
     # environment:
