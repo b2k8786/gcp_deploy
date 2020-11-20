@@ -10,4 +10,4 @@ COPY . /var/www/html/
 
 RUN usermod -u 1000 www-data && groupmod -g 1000 www-data
 # RUN a2enmod rewrite
-EXPOSE 88
+# EXPOSE 88
