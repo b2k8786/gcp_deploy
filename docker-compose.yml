@@ -4,16 +4,16 @@ services:
     build:
       context: .
     image: gcp-dock
-    ports:
-      - 88:80
+    # ports:
+    #   - 8080:80
     # depends_on:
     #   - db
     environment:
       # DATABASE_URL: postgres://postgres:qwerty@182.10.0.1/main
       DEBUG: 'true'
-    networks:
-        default:
-            ipv4_address: 0.0.0.0
+    # networks:
+    #     default:
+    #         ipv4_address: 0.0.0.0
   # db:
   #   image: postgres
   #   environment:
